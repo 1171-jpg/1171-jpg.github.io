@@ -4,6 +4,7 @@
     <title>SemEval 2024 BRAINTEASER: A Novel Task Defying Common Sense</title>
     <meta charset="UTF-8">
     <style>
+        
         body {
             text-align: left; /* Change to left align for body */
             background-color: #F5F5F5; /* Light grey color */
@@ -22,6 +23,7 @@
         th {
             background-color: #D3D3D3; /* Darker grey color */
             padding: 10px;
+            border-bottom: 1px solid #000;
         }
 
         td {
@@ -29,8 +31,8 @@
             padding: 10px;
         }
 
-        tr:nth-child(even) {
-            background-color: #E8E8E8; /* Slightly darker grey for alternate rows */
+        tr {
+            border-bottom: 1px solid #000; /* Adds a solid black border */
         }
     </style>
 </head>
@@ -40,34 +42,53 @@
         <a href="#">Task Home Page</a>
     </header>
 
-    <p>The EDiReF shared task at SemEval 2024 is an amalgamation of three subtasks tasks- 
-        (i) Emotion Recognition in Conversation (ERC) in Hindi-English code-mixed conversations, 
-        (ii) Emotion Flip Reasoning (EFR) in Hindi-English code-mixed conversations, and 
-        (iii) EFR in English conversations. The definition for the tasks of ERC and EFR are as illustrated below:
+    <p>BRAINTEASER QA task consists of two subtasks-<strong>Reverse Thinking</strong> and <strong>Word Play</strong> that require awareness of commonsense “defaults” and overwriting them through  unconventional thinking that distinguishes these defaults from hard constraints.
+    
     </p>
 
     <ul>
-        <li>ERC: Given a dialogue, ERC aims to assign an emotion to each utterance from a predefined set of possible emotions.</li>
-        <li>EFR: Given a dialogue, EFR aims to identify the trigger utterance(s) for an emotion-flip in a multi-party conversation dialogue.</li>
+        <li><strong>Reverse Thinking</strong>: Sentence-type brain teaser requires systems to defy commonsense assoications and think out of box.</li>
+        <li><strong>Word Play</strong>: Word-type brain teaser requires systems to discard the semantic meaning of the question or answer but pay attention in a literal way.</li>
     </ul>
 
+    <p>Both tasks include an adversarial subset, created by manually modifying the original brain teasers without changing their latent reasoning path.</p>
+
     <h2>Task Example</h2>
-    <p>For example, given a sample dialogue below:</p>
+    <p>Here are two examples from each subtasks</p>
     <table align="center">
         <thead>
             <tr>
-                <th>Speaker</th>
-                <th>Utterance</th>
+                <th>Question</th>
+                <th>Choice</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Sp1</td>
-                <td>I had an awful day today!</td>
+                <td>A man shaves everyday, yet keeps his beard long.</td>
+                <td>
+                    <strong>He is a barber.</strong><hr>
+                    He wants to maintain his appearance.<hr>
+                    He wants his girlfriend to buy him a razor.<hr>
+                    None of the above.<hr>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><hr></td>
+            </tr>
+            <tr>
+                <td>What part of London is in France?</td>
+                <td>
+                    <strong>The letter N.</strong><hr>
+                    The letter O.<hr>
+                    The letter L.<hr>
+                    None of the above.<hr>
+                </td>
             </tr>
             <!-- Include other rows here -->
         </tbody>
     </table>
+    
+    
     <h2>Important Dates</h2>
     <table>
         <tr>
