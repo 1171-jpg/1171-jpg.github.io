@@ -84,11 +84,82 @@
                     None of the above.<hr>
                 </td>
             </tr>
+            <tr>
+                <td colspan="3"><hr></td>
+            </tr>
             <!-- Include other rows here -->
         </tbody>
     </table>
+
+    <p>To ensure that our task evaluates reasoning ability rather than memorization, we construct adversarial versions of
+        the original data in two ways: </p>
+        
+    <ul>
+        <li> <strong>Semantic Reconstruction</strong> rephrases the original question
+    without changing the correct answer and the distractors.</li>
+        <li> <strong>Context Reconstruction</strong> keeps the 
+    original reasoning path but changes both the question and the answer to describe a new situational context. </li>
+    </ul>
+
+    <p>Here are one example of two adversarial versions of reverser thinking </p>
+    <table align="center">
+    <thead>
+        <tr>
+            <th>Adversarial Strategy</th>
+            <th>Question</th>
+            <th>Choice</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Oringinal</td>
+            <td>A man shaves everyday, yet keeps his beard long.</td>
+            <td>
+                <strong>He is a barber.</strong><hr>
+                He wants to maintain his appearance.<hr>
+                He wants his girlfriend to buy him a razor.<hr>
+                None of the above.<hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <tr>
+            <td>Semantic Reconstruction</td>
+            <td>A man preserves a lengthy beard despite shaving every day.</td>
+            <td>
+                <strong>He is a barber.</strong><hr>
+                He wants to maintain his appearance.<hr>
+                He wants his girlfriend to buy him a razor.<hr>
+                None of the above.<hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <tr>
+            <td>Context Reconstruction</td>
+            <td>Tom attends class every day but doesn’t do any homework.</td>
+            <td>
+                <strong>He is a teacher.</strong><hr>
+                He is a lazy person.<hr>
+                His teacher will not let him fail.<hr>
+                None of the above.<hr>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3"><hr></td>
+        </tr>
+        <!-- Include other rows here -->
+    </tbody>
+    </table>
     
-    
+    <p>Each system will be evaluated based on the following two accuracy metrics:</p>
+    <ul>
+        <li> <strong>Instance-based Accuracy</strong>: We considers each question (original/adversarial) as a separate instance. We will report accuracy for the original, and its adversarials.</li>
+        <li> <strong>Group-based Accuracy</strong>: Each question and its associated adversarial instances form a group, and a system will only receive a score of 1 when it correctly solves all questions in the group.</li>
+    </ul>
+
     <h2>Important Dates</h2>
     <table>
         <tr>
@@ -151,7 +222,7 @@
         </tr>
         <!-- Include other rows here -->
     </table>
-    <!-- Include other sections like ERC, EFR, Important Dates, CodaLab, Downloads, and Organization -->
+
 
 </body>
 </html>
