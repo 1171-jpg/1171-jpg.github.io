@@ -6,39 +6,85 @@
     <style>
         
         body {
-            text-align: left; /* Change to left align for body */
-            background-color: #F5F5F5; /* Light grey color */
-            padding: 0 10%; /* Add padding to left and right for better layout */
+            text-align: left;
+            background-color: #f5fafd;
+            padding: 0 10%;
+            color: #333333;
+            font-family: 'Arial', sans-serif;
         }
+
         header {
-            text-align: center; /* Center align for header */
-            background-color: #D3D3D3; /* Darker grey color */
+            text-align: center;
+            background-color: #8eade1;
             padding: 10px;
+            color: #ffffff;
         }
 
         table {
-        width: 100%;
+            width: 100%;
         }
 
         th {
-            background-color: #D3D3D3; /* Darker grey color */
+            background-color: #8eade1;
             padding: 10px;
             border-bottom: 1px solid #000;
+            color: #ffffff;
         }
 
         td {
-            background-color: #F5F5F5; /* Light grey color */
+            background-color: #f5fafd;
             padding: 10px;
         }
 
         tr {
-            border-bottom: 1px solid #000; /* Adds a solid black border */
+            border-bottom: 1px solid #000;
+        }
+
+        h1, h2 {
+            color: #246d8d;
+        }
+
+        a {
+            color: #246d8d;
+        }
+
+        a:hover {
+            color: #1d5770;
+        }
+
+        ul li strong {
+            color: #246d8d;
+        }
+        .sidebar {
+            width: 200px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #f0f0f0;
+            padding: 20px;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .main-content {
+            margin-left: 220px; 
+            padding: 10px;
         }
     </style>
 </head>
 <body>
+    <div class="sidebar">
+        <ul>
+            <h2>SemEval-2024</h2>
+            <li><a href="#main-content">Task Description</a></li>
+            <li><a href="#task-example">Task Example</a></li>
+            <li><a href="#important-dates">Important Dates</a></li>
+            <li><a href="#organization">Organization</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
     <header>
-        <h1>SemEval 2024 BRAINTEASER: A Novel Task Defying Common Sense</h1>
+        <h1 id="main-content">SemEval 2024 BRAINTEASER: A Novel Task Defying Common Sense</h1>
         <a href="#">Task Home Page</a>
     </header>
 
@@ -53,7 +99,7 @@
 
     <p>Both tasks include an adversarial subset, created by manually modifying the original brain teasers without changing their latent reasoning path.</p>
 
-    <h2>Task Example</h2>
+    <h2 id ="task-example">Task Example</h2>
     <p>Here are two examples from each subtasks</p>
     <table align="center">
         <thead>
@@ -160,7 +206,7 @@
         <li> <strong>Group-based Accuracy</strong>: Each question and its associated adversarial instances form a group, and a system will only receive a score of 1 when it correctly solves all questions in the group.</li>
     </ul>
 
-    <h2>Important Dates</h2>
+    <h2 id ="important-dates">Important Dates</h2>
     <table>
         <tr>
             <th>Event</th>
@@ -202,7 +248,7 @@
         <!-- Include other rows here -->
     </table>
     
-    <h2>Organization</h2>
+    <h2 id ="organization">Organization</h2>
     <table>
         <tr>
             <th>Name</th>
@@ -223,6 +269,6 @@
         <!-- Include other rows here -->
     </table>
 
-
+</div>
 </body>
 </html>
