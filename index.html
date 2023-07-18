@@ -5,12 +5,32 @@
     <meta charset="UTF-8">
     <style>
         body {
-            text-align: center; 
+            text-align: left; /* Change to left align for body */
             background-color: #F5F5F5; /* Light grey color */
+            padding: 0 10%; /* Add padding to left and right for better layout */
         }
         header {
+            text-align: center; /* Center align for header */
             background-color: #D3D3D3; /* Darker grey color */
             padding: 10px;
+        }
+
+        table {
+        width: 100%;
+        }
+
+        th {
+            background-color: #D3D3D3; /* Darker grey color */
+            padding: 10px;
+        }
+
+        td {
+            background-color: #F5F5F5; /* Light grey color */
+            padding: 10px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #E8E8E8; /* Slightly darker grey for alternate rows */
         }
     </style>
 </head>
@@ -48,7 +68,68 @@
             <!-- Include other rows here -->
         </tbody>
     </table>
+    <h2>Important Dates</h2>
+    <table>
+        <tr>
+            <th>Event</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>Tasks announced (with sample data available) </td>
+            <td>17 July 2023</td>
+        </tr>
+        <tr>
+            <td>Training data ready</td>
+            <td>4 September 2023</td>
+        </tr>
+        <tr>
+            <td>Evaluation start</td>
+            <td>10 January 2024</td>
+        </tr>
+        <tr>
+            <td>Evaluation end by by</td>
+            <td>31 January 2024 (latest date; task organizers may choose an earlier date)</td>
+        </tr>
+        <tr>
+            <td>Paper submission due</td>
+            <td>29 February 2024</td>
+        </tr>
+        <tr>
+            <td>Notification to authors</td>
+            <td>1 April 2024</td>
+        </tr>
+        <tr>
+            <td>Camera ready due</td>
+            <td>22 April 2024</td>
+        </tr>
+        <tr>
+            <td>SemEval workshop</td>
+            <td>TBD, 2024 (co-located with a major NLP conference)</td>
+        </tr>
+
+        <!-- Include other rows here -->
+    </table>
     
+    <h2>Organization</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Affiliation</th>
+        </tr>
+        <tr>
+            <td>Yifan Jiang</td>
+            <td>USC,ISI</td>
+        </tr>
+        <tr>
+            <td>Filip Ilievski</td>
+            <td>USC,ISI</td>
+        </tr>
+        <tr>
+            <td>Kaixin Ma</td>
+            <td>CMU, LTI</td>
+        </tr>
+        <!-- Include other rows here -->
+    </table>
     <!-- Include other sections like ERC, EFR, Important Dates, CodaLab, Downloads, and Organization -->
 
 </body>
